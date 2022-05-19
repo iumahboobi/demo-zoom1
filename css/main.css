@@ -30,7 +30,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  padding: 6rem;
+  padding: 2rem;
   background-color: #282b28;
 }
 .grid-container > div {
@@ -155,5 +155,8 @@ ul > li:hover {
 @media only screen and (max-width: 600px) {
   .button {
     padding: 0 1rem;
+  }
+  .container {
+    padding: 0;
   }
 }
