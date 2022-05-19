@@ -100,12 +100,12 @@ i {
 .icons i {
   color: #ffffffb3;
   font-size: 2rem;
+  animation-name: icon-lighting;
+  animation-duration: 5s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
 }
-.icons i:hover {
-  color: #58b423;
-  cursor: pointer;
-  transition: 0.4s;
-}
+
 ul {
   list-style-type: none;
   text-align: center;
@@ -113,6 +113,11 @@ ul {
 ul > li {
   margin-top: 1.5rem;
   font-size: 1.5rem;
+}
+ul > li:hover {
+  color: #58b423;
+  cursor: pointer;
+  transition: 0.4s;
 }
 .button {
   color: #ffffffb3;
@@ -126,11 +131,26 @@ ul > li {
   cursor: pointer;
   background-color: rgb(177, 27, 27);
 }
-/* .icon-col:hover {
-  color: #58b423;
-  cursor: pointer;
-  transition: 0.4s;
-} */
+
+@keyframes icon-lighting {
+  0% {
+    color: #58b423;
+    transform: translateY(0.15rem);
+  }
+  25% {
+    color: rgb(177, 27, 27);
+    transform: translateY(-0.3rem);
+  }
+  75% {
+    color: #a6b423d5;
+    transform: translateY(-0.35rem);
+    /* transition: 1s; */
+  }
+  100% {
+    color: #58b423;
+    transform: translateY(0.15rem);
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .button {
