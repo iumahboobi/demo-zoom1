@@ -131,3 +131,9 @@ ul > li {
   cursor: pointer;
   transition: 0.4s;
 } */
+
+@media only screen and (max-width: 600px) {
+  .button {
+    padding: 0 1rem;
+  }
+}
