@@ -1,0 +1,15 @@
+{
+  "name": "zoom-meeting-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ihsanullah Mahboobi",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
