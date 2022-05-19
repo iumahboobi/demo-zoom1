@@ -45,28 +45,28 @@ h1 {
   background-image: url('../images/student-1.jpeg');
 }
 div:nth-child(2) {
-  background-image: url('/dist/images/student-2.jpeg');
+  background-image: url('../images/student-2.jpeg');
 }
 div:nth-child(3) {
-  background-image: url('/dist/images/student-3.jpeg');
+  background-image: url('../images/student-3.jpeg');
 }
 div:nth-child(4) {
-  background-image: url('/dist/images/student-4.jpeg');
+  background-image: url('../images/student-4.jpeg');
 }
 div:nth-child(5) {
-  background-image: url('/dist/images/student-5.jpeg');
+  background-image: url('../images/student-5.jpeg');
 }
 div:nth-child(6) {
-  background-image: url('/dist/images/student-6.jpeg');
+  background-image: url('../images/student-6.jpeg');
 }
 div:nth-child(7) {
-  background-image: url('/dist/images/student-7.jpeg');
+  background-image: url('../images/student-7.jpeg');
 }
 div:nth-child(8) {
-  background-image: url('/dist/images/student-8.jpeg');
+  background-image: url('../images/student-8.jpeg');
 }
 div:nth-child(9) {
-  background-image: url('/dist/images/student-9.jpeg');
+  background-image: url('../images/student-9.jpeg');
 }
 .user-info {
   display: flex;
@@ -100,12 +100,12 @@ i {
 .icons i {
   color: #ffffffb3;
   font-size: 2rem;
+  animation-name: icon-lighting;
+  animation-duration: 5s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
 }
-.icons i:hover {
-  color: #58b423;
-  cursor: pointer;
-  transition: 0.4s;
-}
+
 ul {
   list-style-type: none;
   text-align: center;
@@ -113,6 +113,11 @@ ul {
 ul > li {
   margin-top: 1.5rem;
   font-size: 1.5rem;
+}
+ul > li:hover {
+  color: #58b423;
+  cursor: pointer;
+  transition: 0.4s;
 }
 .button {
   color: #ffffffb3;
@@ -126,8 +131,29 @@ ul > li {
   cursor: pointer;
   background-color: rgb(177, 27, 27);
 }
-/* .icon-col:hover {
-  color: #58b423;
-  cursor: pointer;
-  transition: 0.4s;
-} */
+
+@keyframes icon-lighting {
+  0% {
+    color: #58b423;
+    transform: translateY(0.15rem);
+  }
+  25% {
+    color: rgb(177, 27, 27);
+    transform: translateY(-0.3rem);
+  }
+  75% {
+    color: #a6b423d5;
+    transform: translateY(-0.35rem);
+    /* transition: 1s; */
+  }
+  100% {
+    color: #58b423;
+    transform: translateY(0.15rem);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    padding: 0 1rem;
+  }
+}
