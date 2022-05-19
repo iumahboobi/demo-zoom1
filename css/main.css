@@ -51,22 +51,22 @@ div:nth-child(3) {
   background-image: url('../images/student-3.jpeg');
 }
 div:nth-child(4) {
-  background-image: url('/dist/images/student-4.jpeg');
+  background-image: url('../images/student-4.jpeg');
 }
 div:nth-child(5) {
-  background-image: url('/dist/images/student-5.jpeg');
+  background-image: url('../images/student-5.jpeg');
 }
 div:nth-child(6) {
-  background-image: url('/dist/images/student-6.jpeg');
+  background-image: url('../images/student-6.jpeg');
 }
 div:nth-child(7) {
-  background-image: url('/dist/images/student-7.jpeg');
+  background-image: url('../images/student-7.jpeg');
 }
 div:nth-child(8) {
-  background-image: url('/dist/images/student-8.jpeg');
+  background-image: url('../images/student-8.jpeg');
 }
 div:nth-child(9) {
-  background-image: url('/dist/images/student-9.jpeg');
+  background-image: url('../images/student-9.jpeg');
 }
 .user-info {
   display: flex;
