@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Ihsanullah Mahboobi",
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^4.0.0"
   },
-  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iumahboobi/demo-zoom1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iumahboobi/demo-zoom1/issues"
+  },
+  "homepage": "https://github.com/iumahboobi/demo-zoom1#readme",
   "description": ""
 }
