@@ -1,8 +1,12 @@
+/*Theme Colors Variables*/
 :root {
   font-size: 62.5%;
 }
 
-/*Theme Colors Variables*/
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 /*Mix in List*/
 * {
   margin: 0;
