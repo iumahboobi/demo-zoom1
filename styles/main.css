@@ -1,133 +1,137 @@
+:root {
+  font-size: 62.5%;
+}
+
+/*Theme Colors Variables*/
+/*Mix in List*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  font-size: 62.5%;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 body {
   background-color: rgb(0, 0, 0);
 }
-.container {
+body .container {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 5rem;
 }
+
 .navigation-bar {
-  /* width: 100%; */
-  padding: 3rem;
+  padding: 3.5rem;
   background-color: #222222;
   text-align: center;
 }
-h1 {
+.navigation-bar h1 {
   font-size: 3.5rem;
   padding: 2rem;
-  color: #ffffffb3;
+  color: rgba(255, 255, 255, 0.7019607843);
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  gap: 3.5rem;
   padding: 2rem;
   background-color: #282b28;
 }
-.grid-container > div {
-  height: 250px;
+.grid-container div {
   background-color: rgb(0, 0, 0);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 250px;
   margin: 1rem;
+  background-color: rgb(0, 0, 0);
 }
-.grid-container > div:nth-child(1) {
-  background-image: url('../images/student-1.jpeg');
+.grid-container div:nth-child(1) {
+  background-image: url("../../images/student-1.jpeg");
 }
-div:nth-child(2) {
-  background-image: url('../images/student-2.jpeg');
+.grid-container div:nth-child(2) {
+  background-image: url("../../images/student-2.jpeg");
 }
-div:nth-child(3) {
-  background-image: url('../images/student-3.jpeg');
+.grid-container div:nth-child(3) {
+  background-image: url("../../images/student-3.jpeg");
 }
-div:nth-child(4) {
-  background-image: url('../images/student-4.jpeg');
+.grid-container div:nth-child(4) {
+  background-image: url("../../images/student-4.jpeg");
 }
-div:nth-child(5) {
-  background-image: url('../images/student-5.jpeg');
+.grid-container div:nth-child(5) {
+  background-image: url("../../images/student-5.jpeg");
 }
-div:nth-child(6) {
-  background-image: url('../images/student-6.jpeg');
+.grid-container div:nth-child(6) {
+  background-image: url("../../images/student-6.jpeg");
 }
-div:nth-child(7) {
-  background-image: url('../images/student-7.jpeg');
+.grid-container div:nth-child(7) {
+  background-image: url("../../images/student-7.jpeg");
 }
-div:nth-child(8) {
-  background-image: url('../images/student-8.jpeg');
+.grid-container div:nth-child(8) {
+  background-image: url("../../images/student-8.jpeg");
 }
-div:nth-child(9) {
-  background-image: url('../images/student-9.jpeg');
+.grid-container div:nth-child(9) {
+  background-image: url("../../images/student-9.jpeg");
 }
-.user-info {
+.grid-container .user-info {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   padding: 0.5rem;
 }
-.user-info p {
-  background-color: #1f19194f;
+.grid-container .user-info p {
+  background-color: rgba(31, 25, 25, 0.3098039216);
   color: white;
   padding: 0 0.5rem;
   font-size: 2rem;
 }
-i {
+.grid-container .user-info i {
   color: #58b423;
   font-size: 2rem;
 }
-.footer {
-  padding: 2rem;
-  position: sticky;
-  bottom: 0;
 
-  background-color: #222222;
-  color: white;
-}
-.icons {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
 .icons i {
-  color: #ffffffb3;
-  font-size: 2rem;
   animation-name: icon-lighting;
   animation-duration: 5s;
   animation-delay: 0.8s;
   animation-iteration-count: infinite;
+  color: rgba(255, 255, 255, 0.7019607843);
+  font-size: 2rem;
 }
 
-ul {
+.footer {
+  padding: 2rem;
+  position: sticky;
+  bottom: 0;
+  background-color: #222222;
+  color: white;
+}
+.footer .icons {
+  display: flex;
+  justify-content: space-around;
+}
+.footer ul {
   list-style-type: none;
   text-align: center;
 }
-ul > li {
+.footer ul li {
   margin-top: 1.5rem;
   font-size: 1.5rem;
 }
-ul > li:hover {
+.footer ul li:hover {
   color: #58b423;
   cursor: pointer;
   transition: 0.4s;
 }
-.button {
-  color: #ffffffb3;
+.footer .button {
+  color: rgba(255, 255, 255, 0.7019607843);
   border-radius: 0.5rem;
   border: none;
   background-color: rgba(177, 27, 27, 0.767);
   padding: 0 3rem;
   font-size: 2rem;
 }
-.button:hover {
+.footer .button:hover {
   cursor: pointer;
   background-color: rgb(177, 27, 27);
 }
@@ -142,7 +146,7 @@ ul > li:hover {
     transform: translateY(-0.3rem);
   }
   75% {
-    color: #a6b423d5;
+    color: rgba(166, 180, 35, 0.8352941176);
     transform: translateY(-0.35rem);
     /* transition: 1s; */
   }
@@ -151,12 +155,14 @@ ul > li:hover {
     transform: translateY(0.15rem);
   }
 }
-
 @media only screen and (max-width: 600px) {
   .button {
     padding: 0 1rem;
   }
+
   .container {
     padding: 0;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
