@@ -1,0 +1,206 @@
+:root {
+  font-size: 62.5%;
+  //   font-family: $font-family;
+}
+// body {
+//   font-family: $font-family;
+// }
+/*Theme Colors Variables*/
+$black: rgb(0, 0, 0);
+$dark-grey: #282b28;
+$light-grey: #1f19194f;
+$white: white;
+$green-light: #58b423;
+$grey: #ffffffb3;
+$reddish: rgb(177, 27, 27);
+$dark-red: rgba(177, 27, 27, 0.767);
+$greenish: #a6b423d5;
+$brownish-black: #222222;
+
+$font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$text-center: center;
+
+$xs-size: 0.5rem;
+$s-size: 1rem;
+$m-size: 1.5rem;
+$l-size: 2rem;
+$xl-size: 2.5rem;
+$xll-size: 3.5rem;
+
+$list-style-none: none;
+
+/*Mix in List*/
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 5rem;
+}
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $xll-size;
+}
+@mixin image-container {
+  background-color: $black;
+  background-position: $text-center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin animation {
+  animation-name: icon-lighting;
+  animation-duration: 5s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
+}
+* {
+  @include reset;
+}
+body {
+  background-color: $black;
+  .container {
+    @include container;
+  }
+}
+.navigation-bar {
+  padding: $xll-size;
+  background-color: $brownish-black;
+  text-align: $text-center;
+  h1 {
+    font-size: $xll-size;
+    padding: $l-size;
+    color: $grey;
+  }
+}
+.grid-container {
+  @include grid;
+  padding: $l-size;
+  background-color: $dark-grey;
+  div {
+    @include image-container;
+    height: 250px;
+    margin: $s-size;
+    background-color: $black;
+    &:nth-child(1) {
+      background-image: url('../images/student-1.jpeg');
+    }
+    &:nth-child(2) {
+      background-image: url('../images/student-2.jpeg');
+    }
+    &:nth-child(3) {
+      background-image: url('../images/student-3.jpeg');
+    }
+    &:nth-child(4) {
+      background-image: url('../images/student-4.jpeg');
+    }
+    &:nth-child(5) {
+      background-image: url('../images/student-5.jpeg');
+    }
+    &:nth-child(6) {
+      background-image: url('../images/student-6.jpeg');
+    }
+    &:nth-child(7) {
+      background-image: url('../images/student-7.jpeg');
+    }
+    &:nth-child(8) {
+      background-image: url('../images/student-8.jpeg');
+    }
+    &:nth-child(9) {
+      background-image: url('../images/student-9.jpeg');
+    }
+  }
+  .user-info {
+    @include flex-space-around;
+    align-items: flex-end;
+    padding: $xs-size;
+
+    p {
+      background-color: #1f19194f;
+      color: $white;
+      padding: 0 $xs-size;
+      font-size: $l-size;
+    }
+    i {
+      color: $green-light;
+      font-size: $l-size;
+    }
+  }
+}
+
+.icons i {
+  @include animation;
+  color: $grey;
+  font-size: $l-size;
+}
+.footer {
+  padding: $l-size;
+  position: sticky;
+  bottom: 0;
+  background-color: $brownish-black;
+  color: $white;
+  .icons {
+    @include flex-space-around;
+  }
+  ul {
+    list-style-type: $list-style-none;
+    text-align: $text-center;
+    li {
+      margin-top: $m-size;
+      font-size: $m-size;
+      &:hover {
+        color: $green-light;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+    }
+  }
+  .button {
+    color: $grey;
+    border-radius: $xs-size;
+    border: none;
+    background-color: $dark-red;
+    padding: 0 3rem;
+    font-size: $l-size;
+    &:hover {
+      cursor: pointer;
+      background-color: $reddish;
+    }
+  }
+}
+@keyframes icon-lighting {
+  0% {
+    color: $green-light;
+    transform: translateY(0.15rem);
+  }
+  25% {
+    color: $reddish;
+    transform: translateY(-0.3rem);
+  }
+  75% {
+    color: $greenish;
+    transform: translateY(-0.35rem);
+    /* transition: 1s; */
+  }
+  100% {
+    color: $green-light;
+    transform: translateY(0.15rem);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button {
+    padding: 0 1rem;
+  }
+  .container {
+    padding: 0;
+  }
+}
